@@ -5,6 +5,7 @@ Includes Snort + PulledPork + WebSnort (exposes port 8080)
 The project is to assit in initial stage triage of a potentially malicious pcap. It runs all the rules it can against a pcap attempting to highlight sessions of interest.
 
 *Processing of the PCAP does take a while due to the number of rules being utilised!*
+*It doesn't work for processing pcapng files*
 
 Thanks to:
 - Cisco / Sourcefire / Snort team for Snort
@@ -22,7 +23,7 @@ Thanks to:
     
 ### 2. Run with:
 
-    docker run -P8080:8080 snortweb
+    docker run -p 8080:8080 snortweb
     
 Once running, visit http://localhost:8080/
 
